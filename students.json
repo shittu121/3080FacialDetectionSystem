@@ -1,38 +1,127 @@
 [
-  {
-    "MatricNo": "UNIOSUN/CSC/001",
-    "Name": "Faruq",
-    "Level": 400,
-    "Campus": "Main Campus",
-    "Department": "Computer Science",
-    "Gender": "Male",
-    "ImagePath": "images/faruq1.png"
-  },
-  {
-    "MatricNo": "UNIOSUN/CSC/001",
-    "Name": "Faruq",
-    "Level": 400,
-    "Campus": "Main Campus",
-    "Department": "Computer Science",
-    "Gender": "Male",
-    "ImagePath": "images/faruq2.png"
-  },
-  {
-    "MatricNo": "UNIOSUN/EEE/002",
-    "Name": "Fred",
-    "Level": 300,
-    "Campus": "Main Campus",
-    "Department": "Electrical Engineering",
-    "Gender": "Male",
-    "ImagePath": "images/fred1.png"
-  },
-  {
-    "MatricNo": "UNIOSUN/BCH/003",
-    "Name": "Victoria",
-    "Level": 500,
-    "Campus": "Main Campus",
-    "Department": "Biochemistry",
-    "Gender": "Female",
-    "ImagePath": "images/victoria1.png"
-  }
-] 
+  {"MatricNo": "S001", "Name": "Person 1", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_1_1.jpg"},
+  {"MatricNo": "S001", "Name": "Person 1", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_1_2.jpg"},
+  {"MatricNo": "S001", "Name": "Person 1", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_1_3.jpg"},
+  {"MatricNo": "S001", "Name": "Person 1", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_1_4.jpg"},
+  {"MatricNo": "S001", "Name": "Person 1", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_1_5.jpg"},
+
+  {"MatricNo": "S002", "Name": "Person 2", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_2_1.jpg"},
+  {"MatricNo": "S002", "Name": "Person 2", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_2_2.jpg"},
+  {"MatricNo": "S002", "Name": "Person 2", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_2_3.jpg"},
+  {"MatricNo": "S002", "Name": "Person 2", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_2_4.jpg"},
+  {"MatricNo": "S002", "Name": "Person 2", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_2_5.jpg"},
+
+  {"MatricNo": "S003", "Name": "Person 3", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_3_1.jpg"},
+  {"MatricNo": "S003", "Name": "Person 3", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_3_2.jpg"},
+  {"MatricNo": "S003", "Name": "Person 3", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_3_3.jpg"},
+  {"MatricNo": "S003", "Name": "Person 3", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_3_4.jpg"},
+  {"MatricNo": "S003", "Name": "Person 3", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_3_5.jpg"},
+
+  {"MatricNo": "S004", "Name": "Person 4", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_4_1.jpg"},
+  {"MatricNo": "S004", "Name": "Person 4", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_4_2.jpg"},
+  {"MatricNo": "S004", "Name": "Person 4", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_4_3.jpg"},
+  {"MatricNo": "S004", "Name": "Person 4", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_4_4.jpg"},
+  {"MatricNo": "S004", "Name": "Person 4", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_4_5.jpg"},
+
+  {"MatricNo": "S005", "Name": "Person 5", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_5_1.jpg"},
+  {"MatricNo": "S005", "Name": "Person 5", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_5_2.jpg"},
+  {"MatricNo": "S005", "Name": "Person 5", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_5_3.jpg"},
+  {"MatricNo": "S005", "Name": "Person 5", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_5_4.jpg"},
+  {"MatricNo": "S005", "Name": "Person 5", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_5_5.jpg"},
+
+  {"MatricNo": "S006", "Name": "Person 6", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_6_1.jpg"},
+  {"MatricNo": "S006", "Name": "Person 6", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_6_2.jpg"},
+  {"MatricNo": "S006", "Name": "Person 6", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_6_3.jpg"},
+  {"MatricNo": "S006", "Name": "Person 6", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_6_4.jpg"},
+  {"MatricNo": "S006", "Name": "Person 6", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_6_5.jpg"},
+
+  {"MatricNo": "S007", "Name": "Person 7", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_7_1.jpg"},
+  {"MatricNo": "S007", "Name": "Person 7", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_7_2.jpg"},
+  {"MatricNo": "S007", "Name": "Person 7", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_7_3.jpg"},
+  {"MatricNo": "S007", "Name": "Person 7", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_7_4.jpg"},
+  {"MatricNo": "S007", "Name": "Person 7", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_7_5.jpg"},
+
+  {"MatricNo": "S008", "Name": "Person 8", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_8_1.jpg"},
+  {"MatricNo": "S008", "Name": "Person 8", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_8_2.jpg"},
+  {"MatricNo": "S008", "Name": "Person 8", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_8_3.jpg"},
+  {"MatricNo": "S008", "Name": "Person 8", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_8_4.jpg"},
+  {"MatricNo": "S008", "Name": "Person 8", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_8_5.jpg"},
+
+  {"MatricNo": "S009", "Name": "Person 9", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_9_1.jpg"},
+  {"MatricNo": "S009", "Name": "Person 9", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_9_2.jpg"},
+  {"MatricNo": "S009", "Name": "Person 9", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_9_3.jpg"},
+  {"MatricNo": "S009", "Name": "Person 9", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_9_4.jpg"},
+  {"MatricNo": "S009", "Name": "Person 9", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_9_5.jpg"},
+
+  {"MatricNo": "S010", "Name": "Person 10", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_10_1.jpg"},
+  {"MatricNo": "S010", "Name": "Person 10", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_10_2.jpg"},
+  {"MatricNo": "S010", "Name": "Person 10", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_10_3.jpg"},
+  {"MatricNo": "S010", "Name": "Person 10", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_10_4.jpg"},
+  {"MatricNo": "S010", "Name": "Person 10", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_10_5.jpg"},
+
+  {"MatricNo": "S011", "Name": "Person 11", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_11_1.jpg"},
+  {"MatricNo": "S011", "Name": "Person 11", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_11_2.jpg"},
+  {"MatricNo": "S011", "Name": "Person 11", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_11_3.jpg"},
+  {"MatricNo": "S011", "Name": "Person 11", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_11_4.jpg"},
+  {"MatricNo": "S011", "Name": "Person 11", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_11_5.jpg"},
+
+  {"MatricNo": "S012", "Name": "Person 12", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_12_1.jpg"},
+  {"MatricNo": "S012", "Name": "Person 12", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_12_2.jpg"},
+  {"MatricNo": "S012", "Name": "Person 12", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_12_3.jpg"},
+  {"MatricNo": "S012", "Name": "Person 12", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_12_4.jpg"},
+  {"MatricNo": "S012", "Name": "Person 12", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_12_5.jpg"},
+
+  {"MatricNo": "S013", "Name": "Person 13", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_13_1.jpg"},
+  {"MatricNo": "S013", "Name": "Person 13", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_13_2.jpg"},
+  {"MatricNo": "S013", "Name": "Person 13", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_13_3.jpg"},
+  {"MatricNo": "S013", "Name": "Person 13", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_13_4.jpg"},
+  {"MatricNo": "S013", "Name": "Person 13", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_13_5.jpg"},
+
+  {"MatricNo": "S014", "Name": "Person 14", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_14_1.jpg"},
+  {"MatricNo": "S014", "Name": "Person 14", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_14_2.jpg"},
+  {"MatricNo": "S014", "Name": "Person 14", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_14_3.jpg"},
+  {"MatricNo": "S014", "Name": "Person 14", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_14_4.jpg"},
+  {"MatricNo": "S014", "Name": "Person 14", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_14_5.jpg"},
+
+  {"MatricNo": "S015", "Name": "Person 15", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_15_1.jpg"},
+  {"MatricNo": "S015", "Name": "Person 15", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_15_2.jpg"},
+  {"MatricNo": "S015", "Name": "Person 15", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_15_3.jpg"},
+  {"MatricNo": "S015", "Name": "Person 15", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_15_4.jpg"},
+  {"MatricNo": "S015", "Name": "Person 15", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_15_5.jpg"},
+
+  {"MatricNo": "S016", "Name": "Person 16", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_16_1.jpg"},
+  {"MatricNo": "S016", "Name": "Person 16", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_16_2.jpg"},
+  {"MatricNo": "S016", "Name": "Person 16", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_16_3.jpg"},
+  {"MatricNo": "S016", "Name": "Person 16", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_16_4.jpg"},
+  {"MatricNo": "S016", "Name": "Person 16", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_16_5.jpg"},
+
+  {"MatricNo": "S017", "Name": "Person 17", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_17_1.jpg"},
+  {"MatricNo": "S017", "Name": "Person 17", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_17_2.jpg"},
+  {"MatricNo": "S017", "Name": "Person 17", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_17_3.jpg"},
+  {"MatricNo": "S017", "Name": "Person 17", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_17_4.jpg"},
+  {"MatricNo": "S017", "Name": "Person 17", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_17_5.jpg"},
+
+  {"MatricNo": "S018", "Name": "Person 18", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_18_1.jpg"},
+  {"MatricNo": "S018", "Name": "Person 18", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_18_2.jpg"},
+  {"MatricNo": "S018", "Name": "Person 18", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_18_3.jpg"},
+  {"MatricNo": "S018", "Name": "Person 18", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_18_4.jpg"},
+  {"MatricNo": "S018", "Name": "Person 18", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_18_5.jpg"},
+
+  {"MatricNo": "S019", "Name": "Person 19", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_19_1.jpg"},
+  {"MatricNo": "S019", "Name": "Person 19", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_19_2.jpg"},
+  {"MatricNo": "S019", "Name": "Person 19", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_19_3.jpg"},
+  {"MatricNo": "S019", "Name": "Person 19", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_19_4.jpg"},
+  {"MatricNo": "S019", "Name": "Person 19", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_19_5.jpg"},
+
+  {"MatricNo": "S020", "Name": "Person 20", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_20_1.jpg"},
+  {"MatricNo": "S020", "Name": "Person 20", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_20_2.jpg"},
+  {"MatricNo": "S020", "Name": "Person 20", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_20_3.jpg"},
+  {"MatricNo": "S020", "Name": "Person 20", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_20_4.jpg"},
+  {"MatricNo": "S020", "Name": "Person 20", "Level": 100, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Unknown", "ImagePath": "images/person_20_5.jpg"},
+
+  {"MatricNo": "S021", "Name": "Faruq", "Level": 400, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Male", "ImagePath": "images/faruq1.png"},
+  {"MatricNo": "S021", "Name": "Faruq", "Level": 400, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Male", "ImagePath": "images/faruq2.png"},
+  {"MatricNo": "S021", "Name": "Faruq", "Level": 400, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Male", "ImagePath": "images/faruq3.png"},
+  {"MatricNo": "S021", "Name": "Faruq", "Level": 400, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Male", "ImagePath": "images/faruq4.png"},
+  {"MatricNo": "S021", "Name": "Faruq", "Level": 400, "Campus": "Main Campus", "Department": "Computer Science", "Gender": "Male", "ImagePath": "images/faruq5.png"}
+]

@@ -1,13 +1,14 @@
-import cv2
 import os
 import pickle
 import pandas as pd
 import numpy as np
-import requests
+import insightface
+import cv2
 from io import BytesIO
-from PIL import Image
+from PIL import Image, UnidentifiedImageError
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse
+import requests
 import logging
 
 # --- Setup Logging ---
@@ -16,15 +17,17 @@ logger = logging.getLogger(__name__)
 
 # --- Initialize FastAPI ---
 app = FastAPI(
-    title="Osun State University Student Recognition API",
+    title="Osun State University Student Recognition API with InsightFace",
     description="An API to recognize students from images and return their profile.",
     version="1.0.0"
 )
 
 # --- Configuration ---
 MODEL_FILE = "student_model.pkl"
-FACE_CASCADE = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
-IMAGE_SIZE = (100, 100)
+
+# Load InsightFace model once
+face_app = insightface.app.FaceAnalysis(name='buffalo_l', providers=['CPUExecutionProvider'])
+face_app.prepare(ctx_id=0, det_size=(224, 224))
 
 # --- Global variable for model data ---
 model_data = {}
@@ -45,24 +48,16 @@ def load_model():
         logger.error(f"Failed to load or parse model file: {e}")
         raise RuntimeError("Model file is corrupt or cannot be read.")
 
-def extract_face_from_bytes(image_bytes):
-    """Detects a face from image bytes and prepares it for prediction."""
+def get_face_embedding_from_bytes(image_bytes):
     try:
-        img = Image.open(BytesIO(image_bytes)).convert('L')
-        img_np = np.array(img, 'uint8')
-        
-        faces = FACE_CASCADE.detectMultiScale(img_np, scaleFactor=1.1, minNeighbors=5)
-        
-        if len(faces) == 0:
-            return None
-        
-        x, y, w, h = faces[0]
-        face_roi = img_np[y:y+h, x:x+w]
-        return cv2.resize(face_roi, IMAGE_SIZE).flatten()
-        
-    except Exception as e:
-        logger.error(f"Error processing image bytes: {e}")
+        img = Image.open(BytesIO(image_bytes)).convert('RGB')
+    except UnidentifiedImageError:
         return None
+    img = np.array(img)
+    faces = face_app.get(img)
+    if len(faces) == 0:
+        return None
+    return faces[0].embedding
 
 # --- API Events ---
 @app.on_event("startup")
@@ -74,7 +69,7 @@ async def startup_event():
 @app.get("/", tags=["General"])
 async def root():
     """A welcome message to confirm the API is running."""
-    return {"message": "Welcome to the Student Recognition API. Use the /predict endpoint to identify a student."}
+    return {"message": "Welcome to the Student Recognition API (InsightFace version)."}
 
 @app.post("/predict", tags=["Recognition"])
 async def predict(file: UploadFile = File(...), confidence_threshold: float = 0.6):
@@ -84,19 +79,21 @@ async def predict(file: UploadFile = File(...), confidence_threshold: float = 0.
     - **file**: The image file of the student to recognize.
     - **confidence_threshold**: The minimum confidence required to return a match (0.0 to 1.0).
     """
+    if not file.content_type.startswith('image/'):
+        raise HTTPException(status_code=400, detail="Uploaded file is not an image.")
     if 'model' not in model_data:
         raise HTTPException(status_code=503, detail="Model is not loaded. The service may be starting up or has encountered an error.")
 
     # Read image bytes from the uploaded file
     image_bytes = await file.read()
     
-    face_to_predict = extract_face_from_bytes(image_bytes)
+    emb = get_face_embedding_from_bytes(image_bytes)
 
-    if face_to_predict is None:
-        raise HTTPException(status_code=400, detail="No face could be detected in the uploaded image.")
+    if emb is None:
+        raise HTTPException(status_code=400, detail="Uploaded file is not a valid image or no face detected.")
 
     model = model_data['model']
-    probabilities = model.predict_proba([face_to_predict])[0]
+    probabilities = model.predict_proba([emb])[0]
     confidence = np.max(probabilities)
 
     if confidence < confidence_threshold:
@@ -108,7 +105,7 @@ async def predict(file: UploadFile = File(...), confidence_threshold: float = 0.
     label_encoder = model_data['encoder']
     student_data_df = model_data['data']
     
-    prediction_encoded = model.predict([face_to_predict])[0]
+    prediction_encoded = model.predict([emb])[0]
     matric_no = label_encoder.inverse_transform([prediction_encoded])[0]
     
     student_profile = student_data_df[student_data_df['MatricNo'] == matric_no].iloc[0].to_dict()
@@ -134,18 +131,20 @@ async def predict_url(image_url: str, confidence_threshold: float = 0.6):
     try:
         response = requests.get(image_url)
         response.raise_for_status()
+        if not response.headers['Content-Type'].startswith('image/'):
+            raise HTTPException(status_code=400, detail="URL does not point to an image.")
         image_bytes = response.content
     except requests.RequestException as e:
         raise HTTPException(status_code=400, detail=f"Failed to fetch image from URL: {e}")
 
     # Re-use the same logic as the file upload endpoint
-    face_to_predict = extract_face_from_bytes(image_bytes)
+    emb = get_face_embedding_from_bytes(image_bytes)
 
-    if face_to_predict is None:
-        raise HTTPException(status_code=400, detail="No face could be detected in the image from the URL.")
+    if emb is None:
+        raise HTTPException(status_code=400, detail="URL does not point to a valid image or no face detected.")
 
     model = model_data['model']
-    probabilities = model.predict_proba([face_to_predict])[0]
+    probabilities = model.predict_proba([emb])[0]
     confidence = np.max(probabilities)
 
     if confidence < confidence_threshold:
@@ -157,7 +156,7 @@ async def predict_url(image_url: str, confidence_threshold: float = 0.6):
     label_encoder = model_data['encoder']
     student_data_df = model_data['data']
     
-    prediction_encoded = model.predict([face_to_predict])[0]
+    prediction_encoded = model.predict([emb])[0]
     matric_no = label_encoder.inverse_transform([prediction_encoded])[0]
     
     student_profile = student_data_df[student_data_df['MatricNo'] == matric_no].iloc[0].to_dict()
