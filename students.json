@@ -1,0 +1,38 @@
+[
+  {
+    "MatricNo": "UNIOSUN/CSC/001",
+    "Name": "Faruq",
+    "Level": 400,
+    "Campus": "Main Campus",
+    "Department": "Computer Science",
+    "Gender": "Male",
+    "ImagePath": "images/faruq1.png"
+  },
+  {
+    "MatricNo": "UNIOSUN/CSC/001",
+    "Name": "Faruq",
+    "Level": 400,
+    "Campus": "Main Campus",
+    "Department": "Computer Science",
+    "Gender": "Male",
+    "ImagePath": "images/faruq2.png"
+  },
+  {
+    "MatricNo": "UNIOSUN/EEE/002",
+    "Name": "Fred",
+    "Level": 300,
+    "Campus": "Main Campus",
+    "Department": "Electrical Engineering",
+    "Gender": "Male",
+    "ImagePath": "images/fred1.png"
+  },
+  {
+    "MatricNo": "UNIOSUN/BCH/003",
+    "Name": "Victoria",
+    "Level": 500,
+    "Campus": "Main Campus",
+    "Department": "Biochemistry",
+    "Gender": "Female",
+    "ImagePath": "images/victoria1.png"
+  }
+] 
